@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Styled Page</title>
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        .internal-style {
+            color: #333333;
+            font-size: 20px;
+        }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="1.1P.css">
+</head>
+<body>
+    <!-- Page Heading -->
+    <h1 style="text-align: center; color: #4CAF50; font-size: 30px; margin-top: 50px; font-weight: bold;">Pass Task 1</h1>
+
+    <!-- Image tag with inline style -->
+    <img src="image.jpg" alt="Sample Image" class="center" style="max-width:100%;height:auto;">
+
+    <!-- Table tag -->
+    <table class="internal-style center" style="width: 50%;margin-top: 50px;">
+        <tr>
+            <td style="border: 2px solid #dddddd;padding: 15px;text-align: center;">Data 1</td>
+            <td style="border: 2px solid #dddddd;padding: 15px;text-align: center;">Data 2</td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid #dddddd;padding: 15px;text-align: center;">Data 3</td>
+            <td style="border: 2px solid #dddddd;padding: 15px;text-align: center;">Data 4</td>
+        </tr>
+    </table>
+
+ 
+<!-- Form tag -->
+    <form action="submit_form_placeholder" class="center" style="margin-top: 50px;text-align: center;">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: 3px solid #ccc;-webkit-transition: 0.5s;transition: 0.5s;outline: none;"><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: 3px solid #ccc;-webkit-transition: 0.5s;transition: 0.5s;outline: none;"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: 3px solid #ccc;-webkit-transition: 0.5s;transition: 0.5s;outline: none;"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: 3px solid #ccc;-webkit-transition: 0.5s;transition: 0.5s;outline: none;"><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border: 3px solid #ccc;-webkit-transition: 0.5s;transition: 0.5s;outline: none;"></textarea><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label><br>
+
+        <input type="submit" value="Submit" class="submit-button">
+    </form>
+
+
+</body>
+</html>
