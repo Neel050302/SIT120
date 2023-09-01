@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 3 Todo App</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Todo App</h1>
+        <input type="text" v-model="newTodo" @keyup.enter="addTodo" placeholder="What needs to be done?">
+        <ul>
+            <li v-for="todo in todos" :key="todo.id" :class="{completed: todo.completed}">
+                <input type="checkbox" v-model="todo.completed">
+                {{ todo.text }}
+                <button @click="removeTodo(todo)" v-if="todo.completed">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
