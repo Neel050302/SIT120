@@ -1,0 +1,102 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Add some background texture or color */
+body {
+    background: #f4f4f4 url('path/to/your/background/texture.jpg');
+    background-size: cover;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: gold;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Georgia, serif';
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Main content */
+.main {
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* semi-transparent background */
+}
+
+/* Product grid */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+article {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    overflow: hidden;  /* if you have border-radius */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+article:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Product details */
+article img {
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+article img:hover {
+    transform: scale(1.1);
+}
+
+article h2, article p {
+    margin: 16px 0;
+}
+
+/* Add to Cart button */
+button {
+    background: gold;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: darkgoldenrod;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
