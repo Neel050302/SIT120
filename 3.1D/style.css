@@ -1,0 +1,133 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+h1, h2 {
+    margin-top: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #34495e;
+}
+
+/* Header styles */
+header {
+    background-color: #2980b9; 
+    color: #ecf0f1;
+    padding: 2rem 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #3498db;
+}
+
+/* Newsletter styles */
+.newsletter {
+    margin: 2rem;
+    padding: 1.5rem;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.15);
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.newsletter button {
+    margin-top: 1rem;
+    background-color: #e74c3c;
+}
+
+.newsletter button:hover {
+    background-color: #c0392b;
+}
+
+/* Promo video styles */
+.promo-video {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.15);
+}
+
+/* Live chat styles */
+.live-chat {
+    margin: 2rem 0;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.15);
+}
+
+.chat-box {
+    border-top: 2px solid #2980b9;
+    padding: 1rem;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.chat-output .user-message {
+    background-color: #aed6f1;
+    margin-left: auto;
+}
+
+.chat-output .bot-message {
+    background-color: #f5cba7;
+}
+
+/* Input & Button styles */
+.chat-input input, button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.chat-input input {
+    flex: 1;
+    margin-right: 1rem;
+    border: 1px solid #bdc3c7;
+}
+
+button {
+    background-color: #2980b9;
+    color: #ecf0f1;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3498db;
+    transform: translateY(-2px); /* subtle lift on hover */
+}
+
+button:active {
+    transform: translateY(0); /* returns to position on active click */
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+    .promo-video, .graphics {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main {
+        column-count: 2;
+    }
+
+    .chat-output .user-message,
+    .chat-output .bot-message {
+        width: auto;
+    }
+}

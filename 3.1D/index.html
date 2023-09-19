@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Showcase</title>
+    <link rel="icon" href="path_to_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Set the size of the map */
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <header-component></header-component>
+        <newsletter-component></newsletter-component>
+        <promo-video-component></promo-video-component>
+        <!-- Other components can be added here -->
+    </div>
+
+    <h3>Our Office Location: Jogia Jeweler's - Porbandar</h3>
+
+<!-- The div that will contain your map -->
+<div id="map"></div>
+
+<!-- Google Maps JavaScript API -->
+<script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzZqray8XZTCtQ08JU0Tf7Y5YcugltbIw&callback=initMap">
+</script>
+
+<script>
+    function initMap() {
+        // The provided office location (latitude and longitude)
+        var officeLocation = {lat: 21.6407184, lng: 69.6010164};
+
+        // Create a map centered at the office location
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: officeLocation});
+
+        // Add a marker at the office location
+        var marker = new google.maps.Marker({position: officeLocation, map: map});
+    }
+</script>
+    <section class="live-chat">
+        <h2>Live Chat</h2>
+        <div class="chat-box">
+            <div class="chat-output" id="chatOutput"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button onclick="addChat()">Send</button>
+            </div>
+        </div>
+    </section>
+
+    
+    
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script>
+        const HeaderComponent = {
+            template: `
+                <header class="main-header">
+                    <h1>Welcome to our Jewellery Showcase</h1>
+                </header>
+            `
+        };
+
+        const NewsletterComponent = {
+            template: `
+                <section class="newsletter">
+                    <h2>Sign up for our Newsletter</h2>
+                    <form>
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </section>
+            `
+        };
+
+        const PromoVideoComponent = {
+            template: `
+                <section class="promo-video">
+                    <h2>Watch our latest collection</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                </section>
+            `
+        };
+
+        const app = Vue.createApp({});
+        
+        app.component('header-component', HeaderComponent);
+        app.component('newsletter-component', NewsletterComponent);
+        app.component('promo-video-component', PromoVideoComponent);
+        
+        app.mount('#app');
+
+        function addChat() {
+            const chatOutput = document.getElementById("chatOutput");
+            const chatInput = document.getElementById("chatInput");
+            chatOutput.innerHTML += `<div class="user-message">${chatInput.value}</div>`;
+            // Simulate bot response for demo purposes
+            setTimeout(() => {
+                chatOutput.innerHTML += '<div class="bot-message">Thanks for reaching out! How can I assist you today?</div>';
+            }, 1000);
+            chatInput.value = '';
+        }
+    </script>
+</body>
+
+</html>
