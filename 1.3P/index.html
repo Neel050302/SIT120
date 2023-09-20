@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <nav>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact Me</a>
+            </nav>
+        </header>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill-card" v-for="skill in skills">
+                <h3>{{ skill.name }}</h3>
+                <div class="skill-bar">
+                    <div :style="{ width: skill.level + '%' }"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li v-for="project in projects">
+                    {{ project.name }}
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form @submit.prevent="submitForm">
+                <label>Name:</label>
+                <input type="text" v-model="form.name" required>
+                <label>Message:</label>
+                <textarea v-model="form.message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>© 2023 My Portfolio</p>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.0.0/dist/vue.global.prod.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
